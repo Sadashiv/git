@@ -21,11 +21,11 @@ Git
 
 New system fallows few more feature
 -----------------------------------
- Speed
- Simple design
- Strong support for non-linear development (thousands of parallel branches)
- Fully distributed
- Able to handle large projects like the Linux kernel efficiently (speed and data size)
+| Speed
+| Simple design
+| Strong support for non-linear development (thousands of parallel branches)
+| Fully distributed
+| Able to handle large projects like the Linux kernel efficiently (speed and data size)
 
 Git has Three states
 --------------------
