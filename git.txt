@@ -47,3 +47,15 @@ Updating submodules
 
 Delete Local tag: git tag -l | xargs git tag -d
 Delte Remote tag: git tag -l | xargs -n 1 git push --delete origin
+
+Get a latest commint from branch
+---------------------------------
+cat .git/refs/heads/git
+be98beb57eed7e842dbbcc19afc1a340dc7a2f61
+
+git revert and git rebase 
+git reverse
+
+git pull and rebase
+fast forword
+
