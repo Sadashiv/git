@@ -1,0 +1,49 @@
+git co master -- linux/* #checkout the sinle file of multiple file from other branch
+git diff rel_5.4 rel_5.5 etc/jiva_app_versions.cfg > diff.txt#Diff between two branches
+git diff <commit> head path/to/fubar
+  show the diff between a file on the current branch and potentially another  branch
+
+The lesson here is that if you’re going to push changes, make a bare repository clone with git clone --bare.
+
+git add -p
+git branch -r -d <remote-branch> #remove the remote branch
+git stash drop [<stash-name>]
+  delete the stash
+
+Submodules
+----------
+
+git submodule add <remote_repository> <path/to/submodule>
+  add the given repository at the given path. The addition will be part of the
+  next commit.
+
+git submodule update [--init]
+  Update the registered submodules (clone missing submodules, and checkout
+  the commit specified by the super-repo). --init is needed the first time.
+
+git submodule foreach <command>
+  Executes the given command within each checked out submodule.
+
+Removing submodules
+
+   1. Delete the relevant line from the .gitmodules file.
+   2. Delete the relevant section from .git/config.
+   3. Run git rm --cached path_to_submodule (no trailing slash).
+   4. Commit and delete the now untracked submodule files.
+
+Updating submodules
+  To update a submodule to a new commit:
+    1. update submodule:
+        cd <path to submodule>
+        git pull
+    2. commit the new version of submodule:
+        cd <path to toplevel>
+        git commit -m "update submodule version"
+    3. check that the submodule has the correct version
+        git submodule status
+  If the update in the submodule is not committed in the
+  main repository, it is lost and doing git submodule
+  update will revert to the previous version.
+
+Delete Local tag: git tag -l | xargs git tag -d
+Delte Remote tag: git tag -l | xargs -n 1 git push --delete origin
