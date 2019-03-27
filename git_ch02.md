@@ -18,7 +18,8 @@ git clone https://github.com/Sadashiv/jenkins<br/>
 ssh:
 git clone git@github.com:Sadashiv/jenkins<br/>
 
-Image
+
+![Recording Changes to the Repository](images/lifecycle_chapter2_1.png)
 
 git status<br/>
 
@@ -127,4 +128,3 @@ file will be avail in local<br/>
 git reset --hard README.md<br/>
 Changes will be gone away permnently<br/>
 
-![Image description](working_copy.png)
