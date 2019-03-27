@@ -32,7 +32,7 @@ Git has Three states
 | <img src="working_copy.png"  alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 | ![Screenshot](working_copy.png)
 | ![picture](img/working_copy)
-| .. image:: working_copy.png
+| .. image:: https://github.com/Sadashiv/git/blob/git/working_copy.png
     :width: 400px
     :align: center
     :height: 100px

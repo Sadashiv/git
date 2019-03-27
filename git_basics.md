@@ -13,8 +13,10 @@ $ git commit README.md -m "Initial commit"<br/>
 
 Cloning the existing<br/>
 
-https requires Auth: https://github.com/Sadashiv/jenkins<br/>
-ssh: git@github.com:Sadashiv/jenkins<br/>
+https requires Auth:<br/>
+git clone https://github.com/Sadashiv/jenkins<br/>
+ssh:
+git clone git@github.com:Sadashiv/jenkins<br/>
 
 Image
 
@@ -116,7 +118,7 @@ https://github.com/Sadashiv/dotfiles
 $ git config --global alias.co checkout<br/>
 $ git config --global alias.br branch<br/>
 $ git config --global alias.ci commit<br/>
-$ git config --global alias.st status<br/>>
+$ git config --global alias.st status<br/>
 
 Soft revert of file
 -------------------
@@ -125,3 +127,4 @@ file will be avail in local<br/>
 git reset --hard README.md<br/>
 Changes will be gone away permnently<br/>
 
+![Image description](working_copy.png)
