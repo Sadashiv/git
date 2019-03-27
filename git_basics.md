@@ -111,14 +111,15 @@ git checkout -b <branchname> <tagname>
 Set git aliases globally or Downoad the files
 https://github.com/Sadashiv/dotfiles
 ------------------------------------
-$ git config --global alias.co checkout
-$ git config --global alias.br branch
-$ git config --global alias.ci commit
-$ git config --global alias.st status
+$ git config --global alias.co checkout</p>
+$ git config --global alias.br branch<br/>
+$ git config --global alias.ci commit<br/>>
+$ git config --global alias.st status</p>
 
 Soft revert of file
-git reset HEAD -- README.md
-file will be avail in local
-git reset --hard README.md 
-Changes will be gone away permnently
+-------------------
+git reset HEAD -- README.md</p>
+file will be avail in local</p>
+git reset --hard README.md</p>
+Changes will be gone away permnently</P>
 
