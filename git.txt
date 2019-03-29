@@ -52,10 +52,17 @@ Get a latest commint from branch
 ---------------------------------
 cat .git/refs/heads/git
 be98beb57eed7e842dbbcc19afc1a340dc7a2f61
+or
+git rev-parse gitolite (gitolite is branch)
+be98beb57eed7e842dbbcc19afc1a340dc7a2f61
 
 git revert and git rebase 
 git reverse
 
 git pull and rebase
 fast forword
+
+git worktree
+Three way merge
+refrance/objects data
 

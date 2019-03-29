@@ -56,7 +56,7 @@ git mv run.sh start_jenkins.sh<br/>
 
 viewing the history<br/>
 git log<br/>
-git log [ADOG] --all --graph --oneline --decorate<br/>
+git log [AGOD] --all --graph --oneline --decorate<br/>
 
 Undoing the things<br/>
 git commit --amend<br/>
