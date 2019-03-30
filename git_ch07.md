@@ -219,6 +219,78 @@ $ cat .gitmodules
      path = jenkins
      url = https://github.com/Sadashiv/jenkins
 
+$ git diff --cached --submodule
 
+Cloning a Project with Submodules
+---------------------------------
+
+$ git clone https://github.com/Sadashiv/git
+$ git submodule init
+
+$ git clone --recurse-submodules https://github.com/chaconinc/MainProject
+#clone with recurse modules
+$ git submodule update --remote jenkins
+#Git will by default try to update all of your submodules when you run git submodule update --remote
+
+$ git submodule update --remote --merge
+$ git submodule update --remote --rebase
+$ git push --recurse-submodules=check
+$ git submodule foreach 'git stash'
+
+$ git submodule foreach 'git checkout -b featureA'
+
+Issues with Submodules
+----------------------
+Using submodules isn’t without hiccups, however.<br/>
+
+For instance switching branches with submodules in them can also be tricky.<br/>
+If you create a new branch, add a submodule there, and then switch back to<br/>
+a branch without that submodule, you still have the submodule directory as an untracked directory:<br/>
+
+Git Tools - Bundling
+--------------------
+Though we’ve covered the common ways to transfer Git data over a network<br/>
+(HTTP, SSH, etc), there is actually one more way to do so that is not<br/>
+commonly used but can actually be quite useful.<br/>
+
+$ git bundle create gitrepo.bundle HEAD git
+  Counting objects: 230, done.
+  Delta compression using up to 8 threads.
+  Compressing objects: 100% (134/134), done.
+  Writing objects: 100% (230/230), 243.54 KiB | 20.29 MiB/s, done.
+  Total 230 (delta 119), reused 154 (delta 95)
+
+$ git clone gitrepo.bundle repo
+  cd repo
+  git log
+
+$ git bundle verify ./gitrepo.bundle
+  The bundle contains these 2 refs:
+  c38911da4f5316267633bc48124642e0c6456e49 HEAD
+  c38911da4f5316267633bc48124642e0c6456e49 refs/heads/git
+  The bundle records a complete history.
+  ./gitrepo.bundle is okay
+
+Note: git bundle can be really useful for sharing or doing network-type<br/>
+operations when you don’t have the proper network or shared repository to do so.<br/>
+
+Replace
+-------
+The commit-tree command is one of a set of commands that are commonly<br/>
+referred to as plumbing commands. These are commands that are not gen<br/>
+erally meant to be used directly, but instead are used by other Git c<br/>
+ommands to do smaller jobs. On occasions when we’re doing weirder thi<br/>
+ngs like this, they allow us to do really low-level things but are not<br/>
+meant for daily use. You can read more about plumbing commands in Plu</br>
+mbing and Porcelain<br/>
+
+Git Tools - Credential Storage
+------------------------------
+
+ssh remote can be used with or without passphrase<br/>
+$ git config credential.helper store<br/>
+$ vim ~/.git-credentials<br/>
+$ git push git git<br/>
+$ cat ~/.git-credentials<br/>
 
 
