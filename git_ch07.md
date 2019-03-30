@@ -148,3 +148,77 @@ git ls-files -s
 Workflow
 --------
 ![Git workflow](images/reset-workflow.png)
+git reset HEAD
+git reset --soft commitid
+git reset --mixed commitid
+git reset --hard commitid
+
+So, assume we run git reset file.txt. This form (since you did not specify a commit SHA-1 or branch,
+and you didn’t specify --soft or --hard) is shorthand for git reset --mixed HEAD file.txt, which will:
+
+| Commit Level             | HEAD  | Index | Workdir  | WD Safe?|
+|--------------------------|-------|-------|----------|---------|
+| reset --soft [commit]    | REF   |  NO   |   NO     |  YES    |
+| reset [commit]           | REF   |  YES  |   NO     |  YES    |
+| reset --hard [commit]    | REF   |  YES  |   YES    |  NO     |
+| checkout <commit>        | HEAD  |  YES  |   YES    |  YES    |
+| File Level               |       |       |          |         |
+| reset [commit] <paths>   | NO    |  YES  |   NO     |  YES    |
+| checkout [commit] <paths>| NO    |  YES  |   YES    |  NO     |
+
+Advanced merging
+----------------
+Xignore-all-space or -Xignore-space-change. The first option ignores whitespace completely when comparing lines,<br/>
+the second treats sequences of one or more whitespace characters as equivalent.<br/>
+
+$ git merge -Xignore-space-change whitespace<br/>
+$ git diff --ours<br/>
+$ git diff --theirs<br/>
+
+Reverse the commit
+------------------
+If moving the branch pointers around isn’t going to work for you, Git gives you the<br/>
+option of makinga new commit which undoes all the changes from an existing one. Git<br/>
+calls this operation a “revert”, and in this particular scenario, you’d invoke it like this:<br/>
+
+$ git revert commitid (Commit changes will be available and going to revert changes)<br/>
+  Later same commitid can used to do cherry-pick or get changes<br/>
+
+$ git ls-files -u --> to see the conflicted files and the before, left and right versions:<br/>
+
+Git Tools - Debugging with Git
+------------------------------
+$ git blame -L 69,75 git_ch07.md
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 69) Creating a Branch from a Stash<br/>
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 70) ------------------------------<br/>
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 71) $ git stash branch testchanges<br/><br/>
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 72) 
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 73) Cleaning your Working Directory<br/>
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 74) -------------------------------<br/>
+  de62db0c (Sadashiv H 2019-03-29 21:40:22 +0530 75) git clean -fd<br/> -f => force -d => directory -n => dry run<br/>
+
+
+$ git blame -C -L 69,75 git_ch07.md -> -C to initial commit code
+
+Binary Search
+-------------
+$ git bisect start<br/>
+$ git bisect good<br/>
+$ git bisect bad v1.1<br/>
+
+Git Tools - Submodules
+----------------------
+It often happens that while working on one project, you need to use another<br/>
+project from within it.Perhaps it’s a library that a third party developed or<br/>
+that you’re developing separately and using in multiple parent projects.<br/>
+
+$ git submodule add https://github.com/Sadashiv/rpm
+$ git status
+$ cat .gitmodules 
+  [submodule "jenkins"]
+     path = jenkins
+     url = https://github.com/Sadashiv/jenkins
+
+
+
+
