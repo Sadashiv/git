@@ -7,6 +7,8 @@ cd gitepo
 ls .git/objects/pack/ 
 pack-38ca2c173f154aa93a018d4bab87a4a9b484096a.idx pack-38ca2c173f154aa93a018d4bab87a4a9b484096a.pack
 
+file ends with .pack contains the huge old and unwanted onjects
+
 git verify-pack -v .git/objects/pack/pack-7b03cc896f31b2441f3a791ef760bd28495697e6.idx | sort -k 3 -n | tail -10
 
 blob 6979 670 156343 7647cbbe10e7638d71079fd8f6ca295e89941a51
