@@ -1,5 +1,4 @@
-o
-aksjdkasjdDeleting the objects
+Deleting the objects
 ====================
 
 ls .git/objects/pack/ 
