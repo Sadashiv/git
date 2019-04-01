@@ -3,6 +3,7 @@ Deleting the objects
 
 Cleaning up the old objects
 ---------------------------
+cd gitepo
 ls .git/objects/pack/ 
 pack-38ca2c173f154aa93a018d4bab87a4a9b484096a.idx pack-38ca2c173f154aa93a018d4bab87a4a9b484096a.pack
 
@@ -24,3 +25,4 @@ git rm --cached --ignore-unmatch *.pdf' --all
 rm -Rf .git/refs/original
 rm -Rf .git/logs/
 git gc --aggressive --prune=now
+
