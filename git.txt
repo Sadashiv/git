@@ -52,3 +52,18 @@ git worktree
 Three way merge
 refrance/objects data
 
+git shortlog
+
+Sadashiv Hanamant (1):
+      Added the basic folder structure
+
+Sadshiv (4):
+      Removed the pdf's
+      Added the buildout for windows
+      Moved the file
+      Delete file
+
+git log --author=Sadashiv
+
+git log --stat # to see the number of files added or deleted, Number of line added or deleted
+
