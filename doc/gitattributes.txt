@@ -1,0 +1,6 @@
+Hello git attributes
+Let us check for diff since it's a binary files
+Now I want to see the diff 
+Should able to see doc diff
+
+Txt format conversion
