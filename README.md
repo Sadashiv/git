@@ -1,6 +1,8 @@
 Deleting the objects
 ====================
 
+Cleaning up the old objects
+---------------------------
 ls .git/objects/pack/ 
 pack-38ca2c173f154aa93a018d4bab87a4a9b484096a.idx pack-38ca2c173f154aa93a018d4bab87a4a9b484096a.pack
 
