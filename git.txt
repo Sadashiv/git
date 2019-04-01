@@ -10,20 +10,6 @@ git branch -r -d <remote-branch> #remove the remote branch
 git stash drop [<stash-name>]
   delete the stash
 
-Submodules
-----------
-
-git submodule add <remote_repository> <path/to/submodule>
-  add the given repository at the given path. The addition will be part of the
-  next commit.
-
-git submodule update [--init]
-  Update the registered submodules (clone missing submodules, and checkout
-  the commit specified by the super-repo). --init is needed the first time.
-
-git submodule foreach <command>
-  Executes the given command within each checked out submodule.
-
 Removing submodules
 
    1. Delete the relevant line from the .gitmodules file.
