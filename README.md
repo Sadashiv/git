@@ -1,6 +1,7 @@
 Deleting the objects
 ====================
 
+
 Cleaning up the old objects
 ---------------------------
 cd gitepo
