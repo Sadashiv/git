@@ -30,10 +30,10 @@ Able to handle large projects like the Linux kernel efficiently (speed and data 
 
 Git has Three states
 --------------------
-![Image description](working_copy.png)
+![Git working copy](images/working_copy.png)
 
 
-Instaling git in Linux
+Installing git in Linux
 ----------------------
 https://git-scm.com/download/linux<br/>
 yum install git<br/>
