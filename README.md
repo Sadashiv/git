@@ -18,5 +18,5 @@ Covers the git basics and Advanced<br/>
 10. git_ch10_1.md<br/>
     git_ch10_2.md<br/>
 11. git_tips.md<br/>
-12. To be updated
+12. --To be updated--
 
